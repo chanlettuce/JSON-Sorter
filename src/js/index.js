@@ -6,15 +6,20 @@ import { methods } from "./methods";
 
 $(() => {
   // 実行ボタン
-  $(".do-sort").click(() => {
-    const inputObj = JSON.parse($("[name=input-json]").val());
-    const sorted = methods.objectSort(inputObj);
-    $("[name=output-json]").val(JSON.stringify(sorted, null, 2));
+  $("#sort").click(() => {
+    try {
+      const beforeObj = JSON.parse($("#input-json").val());
+      const afterObj = methods.objectSort(inputObj);
+      $("#output-json").val(JSON.stringify(sorted, null, 2));
+    } catch (e) {
+      console.error(e);
+      $("#error-message").text(e.message);
+    }
   });
 
   // 削除ボタン
-  $(".erase").click(() => {
-    $("[name=input-json]").val("");
-    $("[name=output-json]").val("");
+  $("#erase").click(() => {
+    $("#input-json").val("");
+    $("#output-json").val("");
   });
 });

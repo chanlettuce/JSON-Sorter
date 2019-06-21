@@ -1,6 +1,6 @@
 @import url("markdown.css");
 
-.error-message {
+#error-message {
   background-color: #ee0000;
   color: #ffffff;
 }
