@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "production": "webpack --mode=production"
   },
   "devDependencies": {
     "css-loader": "^3.0.0",
