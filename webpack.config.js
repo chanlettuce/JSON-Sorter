@@ -20,15 +20,8 @@ module.exports = {
         loader: "html-loader"
       },
       {
-        // 対象となるファイルの拡張子(cssのみ)
         test: /\.css$/,
-        // Sassファイルの読み込みとコンパイル
-        use: [
-          // スタイルシートをJSからlinkタグに展開する機能
-          "style-loader",
-          // CSSをバンドルするための機能
-          "css-loader"
-        ]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
